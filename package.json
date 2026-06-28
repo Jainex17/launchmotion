@@ -1,0 +1,19 @@
+{
+  "name": "motion-video",
+  "version": "1.0.0",
+  "description": "Generate premium kinetic-typography product-launch videos from a product description. Deterministic HTML/CSS/JS animation rendered via Puppeteer + ffmpeg.",
+  "type": "commonjs",
+  "bin": {
+    "motion-video": "engine/render.js"
+  },
+  "scripts": {
+    "demo": "node engine/render.js examples/nimbus.json nimbus.mp4"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

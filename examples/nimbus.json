@@ -1,0 +1,88 @@
+{
+  "fps": 30,
+  "crossfade": 0.35,
+  "background": "#1a1a1a",
+  "theme": { "accent": "#5b8cff", "accent-2": "#63d2ff" },
+  "scenes": [
+    { "type": "KineticText", "duration": 2.6,
+      "props": { "lines": ["We deleted", "the **inbox**"], "size": 120, "exitUp": true } },
+
+    { "type": "IconRow", "duration": 2.8,
+      "props": { "caption": "Every tool just sorts it",
+        "icons": [
+          { "glyph": "✉️", "bg": "linear-gradient(160deg,#3b6fd4,#1b3a7a)" },
+          { "glyph": "📥", "bg": "linear-gradient(160deg,#444,#1e1e1e)" },
+          { "glyph": "🏷️", "bg": "linear-gradient(160deg,#d98a3b,#7a3f1b)" }
+        ] } },
+
+    { "type": "KineticText", "duration": 2.4,
+      "props": { "lines": ["Then they **stop**", "when it gets real"], "size": 104, "exitUp": true } },
+
+    { "type": "ChatThread", "duration": 4.0,
+      "props": { "items": [
+        { "kind": "me", "text": "Reply to the recruiter and decline" },
+        { "kind": "step", "text": "I can't send emails for you", "icon": "✕" },
+        { "kind": "step", "text": "Please sign in to continue", "icon": "✕" },
+        { "kind": "step", "text": "I can't access your calendar", "icon": "✕" }
+      ], "itemDelay": 16 } },
+
+    { "type": "KineticText", "duration": 1.8,
+      "props": { "lines": ["Introducing"], "size": 92, "exitUp": true } },
+
+    { "type": "BrandReveal", "duration": 3.0,
+      "props": { "name": "Nimbus", "size": 168 } },
+
+    { "type": "KineticText", "duration": 3.0,
+      "props": { "lines": ["An inbox that", "**clears itself**"], "size": 112, "exitUp": true } },
+
+    { "type": "KineticText", "duration": 2.6,
+      "props": { "lines": ["across threads,", "calendars & contacts"], "size": 90, "exitUp": true } },
+
+    { "type": "SearchType", "duration": 4.2,
+      "props": { "background": "#ffffff", "mark": "☁",
+        "query": "decline all meetings next week and propose async", "mode": "Ask AI", "model": "GPT-5.5" } },
+
+    { "type": "ChatThread", "duration": 5.2,
+      "props": { "light": false, "items": [
+        { "kind": "step", "text": "Reading next week's calendar — 6 meetings found", "icon": "›" },
+        { "kind": "step", "text": "Drafting a polite async proposal for each", "icon": "›" },
+        { "kind": "sub", "text": "Spawned sub-agent · Rescheduling Design sync", "icon": "▣" },
+        { "kind": "sub", "text": "Spawned sub-agent · Declining Vendor call", "icon": "▣" },
+        { "kind": "ok", "text": "6 replies sent · 4 hours freed this week" }
+      ], "itemDelay": 18 } },
+
+    { "type": "ChatThread", "duration": 3.0,
+      "props": { "items": [
+        { "kind": "me", "text": "wait, how did you just do that?" },
+        { "kind": "step", "text": "I'm a frontier inbox agent built for your long, messy threads.", "icon": "✦" }
+      ], "itemDelay": 20 } },
+
+    { "type": "BenchmarkBars", "duration": 4.2,
+      "props": { "title": "Inbox Agent Benchmark", "sub": "RealMail-500 — including impossible tasks",
+        "rows": [
+          { "label": "Nimbus", "dim": "GPT 5.5", "value": 98, "win": true },
+          { "label": "Superhuman AI", "value": 91 },
+          { "label": "Copilot", "dim": "Outlook", "value": 84 },
+          { "label": "Gmail Smart", "value": 73 }
+        ] } },
+
+    { "type": "KineticText", "duration": 2.8,
+      "props": { "lines": ["Anything you'd do", "in your **inbox**"], "size": 104, "exitUp": true } },
+
+    { "type": "FeatureList", "duration": 4.4,
+      "props": { "prefix": "It can", "perItem": 22,
+        "items": ["reply", "schedule", "unsubscribe", "summarize", "follow up", "negotiate"] } },
+
+    { "type": "KineticText", "duration": 2.2,
+      "props": { "lines": ["And it's **private**"], "size": 104, "exitUp": true } },
+
+    { "type": "DeviceFrame", "duration": 3.6,
+      "props": { "caption": "Runs on your Mac.<br>Your mail never leaves.", "screenBg": "linear-gradient(135deg,#16335a,#0a1a2e)" } },
+
+    { "type": "KineticText", "duration": 2.6,
+      "props": { "lines": ["Bring your own", "**model & keys**"], "size": 100, "exitUp": true } },
+
+    { "type": "EndCard", "duration": 3.6,
+      "props": { "mark": "☁", "name": "Nimbus", "tagline": "an inbox that does your work", "url": "nimbus.email" } }
+  ]
+}

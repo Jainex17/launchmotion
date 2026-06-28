@@ -1,0 +1,21 @@
+{
+  "fps": 30,
+  "background": "#1a1a1a",
+  "crossfade": 0.35,
+  "scenes": [
+    { "type": "SearchType", "duration": 3.2,
+      "props": { "query": "We killed the dashboard", "mode": "Ask AI", "mark": "◑" } },
+    { "type": "KineticText", "duration": 2.6,
+      "props": { "lines": ["They promised", "to do the **work**"], "size": 104, "exitUp": true } },
+    { "type": "BrandReveal", "duration": 3.0,
+      "props": { "name": "Aside", "size": 160 } },
+    { "type": "BenchmarkBars", "duration": 3.4,
+      "props": { "title": "Browsing Agent Benchmark", "sub": "Online-Mind2Web — 300 tasks",
+        "rows": [
+          { "label": "Aside", "dim": "GPT 5.5", "value": 99, "win": true },
+          { "label": "Browser use", "value": 97 },
+          { "label": "Claude", "dim": "Opus 4.7", "value": 86 },
+          { "label": "ChatGPT Atlas", "value": 70 }
+        ] } }
+  ]
+}
