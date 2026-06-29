@@ -12,30 +12,17 @@ glowing benchmark bars, a privacy beat, an end card — cut to a music bed.
 This repo is an **AI agent skill** that teaches ChatGPT or Claude how to make
 product launch videos for you.
 
-### Setup
+### Usage (one command)
 
-1. Clone this repo (or download it as a folder)
-2. Copy/symlink the folder into your AI's skills directory
-3. Install dependencies:
+Give your AI the repo URL and ask for a video:
 
-```bash
-npm install                    # installs puppeteer + Chromium
-# (optional) brew install ffmpeg   # for video encoding
-```
+> *"Use the skill at https://github.com/YOUR_USER/launchmotion to create a launch video for [product]. Here's the description: ..."*
 
-### Usage
+The AI will read `SKILL.md` to learn the scene types, write a storyboard
+tailored to your product, and render the video.
 
-Just tell your AI something like:
-
-> *"Create a launch video for [my product name]. Here's the description: ..."*
-
-The AI will:
-1. Read `SKILL.md` to learn the scene types and narrative arc
-2. Write a script and storyboard JSON tailored to your product
-3. Render the video using `engine/render.js`
-
-Example output: [`examples/nimbus.mp4`](examples/nimbus.mp4)
-(that video was generated entirely by AI using this skill)
+**No cloning needed.** The AI reads the skill directly from GitHub. You just
+need the render dependencies on your machine:
 
 ### Requirements
 
