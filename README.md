@@ -1,11 +1,14 @@
-# launchmotion
+# LaunchMotion
 
 Generate premium **kinetic-typography product-launch videos** from a product
 description. Bold type that snaps in, a gradient brand reveal, a UI demo,
-glowing benchmark bars, a privacy beat, an end card — cut to a music bed.
+glowing benchmark bars, a privacy beat, an end card cut to a music bed.
 1080p H.264 out. Deterministic, dependency-light, license-free.
 
-[▶️ Watch example — Nimbus launch video](examples/nimbus.mp4)
+### Watch example Nimbus launch video
+<video src="https://github.com/user-attachments/assets/05fef8a1-6bac-4aff-bd14-282fcfe3843f"></video>
+
+
 
 ## How to use this with ChatGPT or Claude
 
