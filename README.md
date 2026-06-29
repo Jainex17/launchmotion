@@ -1,56 +1,51 @@
-# motion-video
+# launchmotion
 
 Generate premium **kinetic-typography product-launch videos** from a product
 description. Bold type that snaps in, a gradient brand reveal, a UI demo,
 glowing benchmark bars, a privacy beat, an end card — cut to a music bed.
 1080p H.264 out. Deterministic, dependency-light, license-free.
 
-This is a **Claude Skill**: drop the folder into your skills directory and ask
-for a launch video for any product. `SKILL.md` contains the full authoring
-guide; this README is the 60-second version.
+[▶️ Watch example — Nimbus launch video](examples/nimbus.mp4)
 
-## Requirements
+## How to use this with ChatGPT or Claude
 
-- Node ≥ 18 with `puppeteer` installed (Chromium)
-- `ffmpeg` on PATH
-- `python3` + `numpy` + `scipy` (only for the optional music bed)
+This repo is an **AI agent skill** that teaches ChatGPT or Claude how to make
+product launch videos for you.
 
-## Quick start
+### Setup
+
+1. Clone this repo (or download it as a folder)
+2. Copy/symlink the folder into your AI's skills directory
+3. Install dependencies:
 
 ```bash
-# 1. write a storyboard (see SKILL.md schema; copy examples/nimbus.json)
-# 2. (optional) make a music bed sized to the film
-engine/soundtrack.sh 58 bed.m4a uplift          # moods: uplift|bold|drive|calm
-
-# 3. render
-node engine/render.js examples/nimbus.json out.mp4 --audio bed.m4a
-
-# 4. spot-check frames
-for t in 3 12 24 36 48; do ffmpeg -v error -ss $t -i out.mp4 -frames:v 1 f_$t.jpg; done
-montage f_*.jpg -tile 5x1 -geometry 384x216+3+3 grid.png
+npm install                    # installs puppeteer + Chromium
+# (optional) brew install ffmpeg   # for video encoding
 ```
 
-## How it works
+### Usage
 
-You write the **script + storyboard** (which scenes, in what order, with what
-words). All animation craft — easing, spring physics, blur-in reveals, glows,
-count-ups — is baked into a fixed library of scene components in
-`engine/scenes.js`. You never hand-write animation. Every pixel is a pure
-function of the frame index, so renders are fully reproducible.
+Just tell your AI something like:
 
-```
-storyboard.json ──► render.js ──► Puppeteer seeks each frame ──► ffmpeg ──► out.mp4
-```
+> *"Create a launch video for [my product name]. Here's the description: ..."*
 
-## Scene vocabulary
+The AI will:
+1. Read `SKILL.md` to learn the scene types and narrative arc
+2. Write a script and storyboard JSON tailored to your product
+3. Render the video using `engine/render.js`
 
-`KineticText` · `BrandReveal` · `SearchType` (command bar) · `ChatThread`
-(AI reasoning) · `BenchmarkBars` · `FeatureList` · `IconRow` · `DeviceFrame`
-(MacBook) · `EndCard`. Full props and a worked example in **SKILL.md**.
+Example output: [`examples/nimbus.mp4`](examples/nimbus.mp4)
+(that video was generated entirely by AI using this skill)
 
-## Customizing the look
+### Requirements
 
-Set a `theme` block in the storyboard to match a brand:
+- Node ≥ 18
+- `ffmpeg` on PATH
+- `python3` + `numpy` + `scipy` (only for optional music bed)
+
+### Customizing the look
+
+Set a `theme` block in the storyboard to match your brand:
 
 ```json
 "theme": { "accent": "#ff5a36", "accent-2": "#ffb199", "bg": "#0e0e10" }
