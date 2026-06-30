@@ -19,7 +19,7 @@ product launch videos for you.
 
 Give your AI the repo URL and ask for a video:
 
-> *"Use the skill at https://github.com/YOUR_USER/launchmotion to create a launch video for [product]. Here's the description: ..."*
+> *"Use the skill at https://github.com/jainex17/launchmotion to create a launch video for [product]. Here's the description: ..."*
 
 The AI will read `SKILL.md` to learn the scene types, write a storyboard
 tailored to your product, and render the video.
